@@ -1,39 +1,56 @@
 package ShoppingMall;
 
-import ShoppingMall.Customer;
+import java.util.ArrayList;
+import java.util.List;
 
-import java.util.Collection;
+public class Store {
 
-public abstract class Store {
+//    private String name;
+//    private String ID;
+//    public Collection<String> items;
+//    public Collection<String> customers;
+//    protected Stores stores;
 
-    private String name;
-    private String ID;
-    public Collection<String> items;
-    public Collection<String> customers;
-    protected Stores stores;
+    private List<Item> products = new ArrayList<Item>();
 
-    public Collection<String> observes;
-
-    public Stores getStores(){
-        return stores;
-    }
-    void enter(Customer c){
-
-    }
-    void exit(Customer c){
-
+    public Store () {
+        this.initStoreItems();
     }
 
-    enum customers{
-
+    public List<Item> getItems() {
+        return products;
     }
 
-    enum items{
+    public void initStoreItems() {
+        String [] productNames = {"The Shadow of the Wind", "The Kite Runner", "Little Women"};
+        Double [] productPrice = {50.00d, 70.00d, 20.00d};
 
+        for (int i=0; i < productNames.length; i++) {
+            this.products.add(new Item(i+1, productNames[i], productPrice[i]));
+        }
     }
 
-    void addObserver (Observer O){
 
-    }
+//    public Stores getStores(){
+//        return stores;
+//    }
+//    void enter(Customer c){
+//
+//    }
+//    void exit(Customer c){
+//
+//    }
+//
+//    enum customers{
+//
+//    }
+//
+//    enum items{
+//
+//    }
+//
+//    void addObserver (Observer O){
+//
+//    }
 
 }

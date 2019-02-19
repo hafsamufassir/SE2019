@@ -5,21 +5,53 @@ import java.util.List;
 
 public class ShoppingCart {
 
-    static List<Item> items = new ArrayList<Item>();
+    List<Item> cartItems = new ArrayList<Item>();
 
+    public void addProductToCartByPID(int pid) {
+        Item product = getProductByProductID(pid);
+        addToCart(product);
+    }
 
-    public void getItems() {
-        for (Item product: items) {
-            System.out.println(product.getName());
+    private Item getProductByProductID(int pid) {
+        Item product = null;
+        List<Item> products = new Store().getItems();
+        for (Item prod: products) {
+            if (prod.getpID() == pid) {
+                product = prod;
+                break;
+            }
+        }
+        return product;
+    }
+
+    private void addToCart(Item product) {
+        cartItems.add(product);
+    }
+
+    public void removeProductByPID(int pid) {
+        Item prod = getProductByProductID(pid);
+        cartItems.remove(prod);
+    }
+
+    void printCartItems() {
+        for (Item prod: cartItems) {
+            System.out.println(prod.getName());
         }
     }
 
-    public static void addItem(Item item){
-        items.add(item);
-    }
 
-    public void removeItem(Item item){
-
-    }
+//    public void getItems() {
+//        for (Item product: items) {
+//            System.out.println(product.getName());
+//        }
+//    }
+//
+//    public static void addItem(Item item){
+//        items.add(item);
+//    }
+//
+//    public void removeItem(Item item){
+//
+//    }
 }
 
