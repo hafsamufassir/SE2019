@@ -7,27 +7,6 @@ import java.util.Scanner;
 
 public class BookStore extends Store {
 
-//    public void getBooks(){
-//        System.out.println(" 1  - Song of Solomon");
-//        System.out.println(" 2  - The Lord of the Rings");
-//        System.out.println(" 3  - The Shadow of the Wind");
-//        System.out.println(" 4  - The Kite Runner");
-//        System.out.println(" 5  - Little Women");
-//
-//        Scanner in = new Scanner(System.in);
-//        int choice = in.nextInt();
-//
-//        while(choice < 1  ||  choice > 5){
-//            System.out.println(" 1  - Song of Solomon");
-//            System.out.println(" 2  - The Lord of the Rings");
-//            System.out.println(" 3  - The Shadow of the Wind");
-//            System.out.println(" 4  - The Kite Runner");
-//            System.out.println(" 5  - Little Women");
-//        }
-//
-//
-//    }
-
     public static List<Item> products = new ArrayList<Item>();
     Store store;
 

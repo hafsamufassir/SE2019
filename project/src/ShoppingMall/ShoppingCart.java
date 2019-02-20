@@ -38,19 +38,4 @@ public class ShoppingCart {
             System.out.println(prod.getName());
         }
     }
-
-
-//    public void getItems() {
-//        for (Item product: items) {
-//            System.out.println(product.getName());
-//        }
-//    }
-//
-//    public static void addItem(Item item){
-//        items.add(item);
-//    }
-//
-//    public void removeItem(Item item){
-//
-//    }
 }

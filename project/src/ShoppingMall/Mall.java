@@ -12,12 +12,6 @@ public class Mall{
     private List<String> stores;
     private List<String> customers;
 
-    public static void saveMall(String name) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter("mall.txt"));
-        writer.write(name);
-
-        writer.close();
-    }
 
     public void enter(Customer c){
 

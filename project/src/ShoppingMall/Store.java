@@ -18,7 +18,7 @@ public class Store {
     }
 
     public static List<Item> getItems() {
-        return products; //BookStore.getItems();
+        return products;
     }
 
 
@@ -33,26 +33,5 @@ public class Store {
     }
 
 
-//    public Stores getStores(){
-//        return stores;
-//    }
-//    void enter(Customer c){
-//
-//    }
-//    void exit(Customer c){
-//
-//    }
-//
-//    enum customers{
-//
-//    }
-//
-//    enum items{
-//
-//    }
-//
-//    void addObserver (Observer O){
-//
-//    }
 
 }
