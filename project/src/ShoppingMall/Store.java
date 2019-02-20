@@ -11,23 +11,25 @@ public class Store {
 //    public Collection<String> customers;
 //    protected Stores stores;
 
-    private List<Item> products = new ArrayList<Item>();
+    protected static List<Item> products = new ArrayList<Item>();
 
     public Store () {
-        this.initStoreItems();
+        //this.initStoreItems();
     }
 
-    public List<Item> getItems() {
-        return products;
+    public static List<Item> getItems() {
+        return products; //BookStore.getItems();
     }
+
+
 
     public void initStoreItems() {
-        String [] productNames = {"The Shadow of the Wind", "The Kite Runner", "Little Women"};
-        Double [] productPrice = {50.00d, 70.00d, 20.00d};
-
-        for (int i=0; i < productNames.length; i++) {
-            this.products.add(new Item(i+1, productNames[i], productPrice[i]));
-        }
+//        String [] productNames = {"The Shadow of the Wind", "The Kite Runner", "Little Women"};
+//        Double [] productPrice = {50.00d, 70.00d, 20.00d};
+//
+//        for (int i=0; i < productNames.length; i++) {
+//            this.products.add(new Item(i+1, productNames[i], productPrice[i]));
+//        }
     }
 
 

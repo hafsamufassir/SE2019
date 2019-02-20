@@ -1,5 +1,6 @@
 package ShoppingMall;
 
+import java.awt.print.Book;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,6 +10,7 @@ public class Driver {
     private int ch = 0;
 
     public Driver(){
+        greetingScreen();
         menu();
     }
 
@@ -21,6 +23,7 @@ public class Driver {
         System.out.println("1. BookStore");
         System.out.println("2. GameStore");
         System.out.println("3. ShoeStore");
+        System.out.println("4. Display cart");
     }
 
     public void startScreen () {
@@ -37,7 +40,6 @@ public class Driver {
 
     public void menu () {
         do {
-            greetingScreen();
             chooseStore();
             //startScreen();
             getUserInput();
@@ -50,6 +52,18 @@ public class Driver {
                     innerChoice1();
                     break;
                 case 2:
+                    displayGameStoreProducts();
+                    storeProductsMenu();
+                    getUserInput();
+                    innerChoice1();
+                    break;
+                case 3:
+                    displayShoeStoreProducts();
+                    storeProductsMenu();
+                    getUserInput();
+                    innerChoice1();
+                    break;
+                case 4:
                     showCart();
                     break;
                 case 0:
@@ -66,7 +80,7 @@ public class Driver {
         switch (ch) {
             case 1:
                 addProductToCart();
-                showCart();
+                //showCart();
                 break;
             case 2:
                 removeProductFromCart();
@@ -122,6 +136,13 @@ public class Driver {
         cart.addProductToCartByPID(pid);
     }
 
+//    public static void test(){
+//        Store.products.addAll(GameStore.products);
+//        for(int i = 0; i < Store.products.size(); i++){
+//            System.out.print(Store.products);
+//        }
+//    }
+
     private void showCart() {
         cart.printCartItems();
     }
@@ -131,4 +152,3 @@ public class Driver {
         cart.removeProductByPID(pid);
     }
 }
-
